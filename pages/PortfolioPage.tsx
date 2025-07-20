@@ -68,7 +68,7 @@ const PortfolioPage: React.FC = () => {
     if (!portfolioId) return;
     setIsMakingPublic(true);
     try {
-      await fetch(`http://localhost:5000/api/portfolios/${portfolioId}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/portfolios/${portfolioId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -197,7 +197,7 @@ const PortfolioPage: React.FC = () => {
       </div>
       <div className="lg:col-span-1 flex flex-col">
         <div className="w-full max-w-md mx-auto lg:sticky lg:top-8">
-          <Chatbot portfolio={portfolio} />
+        <Chatbot portfolio={portfolio} />
         </div>
       </div>
     </div>
@@ -205,3 +205,11 @@ const PortfolioPage: React.FC = () => {
 };
 
 export default PortfolioPage;
+
+declare global {
+  interface ImportMeta {
+    env: {
+      VITE_API_URL: string;
+    };
+  }
+}

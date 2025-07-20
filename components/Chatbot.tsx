@@ -69,14 +69,14 @@ ALWAYS answer in a single, concise sentence (one-liner) for every user question,
 Never use more than one sentence. Never use a paragraph. Never use a list. Never use more than 20 words.
 If the answer cannot fit in one sentence, summarize it in one sentence anyway.
 Do not give personalized or regulated financial advice.
-
-Here is the portfolio data:
-- Total Value: $${portfolio.totalValue.toFixed(2)}
-- Cash Balance: $${portfolio.cash.toFixed(2)}
-- Holdings: ${holdingsString}
-- AI-Generated Thesis: ${portfolio.aiInsights.investmentThesis}
-- AI-Generated Summary: ${portfolio.aiInsights.summary}
-
+      
+      Here is the portfolio data:
+      - Total Value: $${portfolio.totalValue.toFixed(2)}
+      - Cash Balance: $${portfolio.cash.toFixed(2)}
+      - Holdings: ${holdingsString}
+      - AI-Generated Thesis: ${portfolio.aiInsights.investmentThesis}
+      - AI-Generated Summary: ${portfolio.aiInsights.summary}
+      
 Answer questions based ONLY on this context.
 `;
 

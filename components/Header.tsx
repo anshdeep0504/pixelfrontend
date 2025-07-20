@@ -53,13 +53,13 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-2 bg-white/5 rounded-xl px-2 py-1 shadow-inner backdrop-blur-md">
             {currentUser && (
               <>
-                <button onClick={() => navigate('/profile')} className="px-4 py-2 rounded-lg bg-brand-accent text-white font-semibold hover:bg-brand-accent-hover focus:ring-2 focus:ring-brand-accent/50 transition-all shadow-md">Dashboard</button>
-                <button onClick={() => navigate('/profile')} className="px-4 py-2 rounded-lg bg-black/70 text-white font-semibold border border-brand-border hover:bg-brand-secondary focus:ring-2 focus:ring-brand-accent/50 transition-all shadow-md">My Portfolio</button>
+            <button onClick={() => navigate('/profile')} className="px-4 py-2 rounded-lg bg-brand-accent text-white font-semibold hover:bg-brand-accent-hover focus:ring-2 focus:ring-brand-accent/50 transition-all shadow-md">Dashboard</button>
+            <button onClick={() => navigate('/profile')} className="px-4 py-2 rounded-lg bg-black/70 text-white font-semibold border border-brand-border hover:bg-brand-secondary focus:ring-2 focus:ring-brand-accent/50 transition-all shadow-md">My Portfolio</button>
               </>
             )}
           </div>
           {currentUser ? (
-            <button onClick={handleLogout} className="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 focus:ring-2 focus:ring-red-400/50 transition-all shadow-md">Log out</button>
+          <button onClick={handleLogout} className="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 focus:ring-2 focus:ring-red-400/50 transition-all shadow-md">Log out</button>
           ) : (
             <button onClick={() => navigate('/login')} className="px-4 py-2 rounded-lg bg-brand-accent text-white font-semibold hover:bg-brand-accent-hover focus:ring-2 focus:ring-brand-accent/50 transition-all shadow-md">Log in</button>
           )}

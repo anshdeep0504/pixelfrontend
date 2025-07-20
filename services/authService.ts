@@ -2,7 +2,15 @@ import { User } from '../types';
 
 // NOTE: This service simulates a backend using localStorage for a functional prototype.
 
-const API_URL = 'http://localhost:5000/api'; // Change if backend runs elsewhere
+declare global {
+  interface ImportMeta {
+    env: {
+      VITE_API_URL: string;
+    };
+  }
+}
+
+const API_URL = import.meta.env.VITE_API_URL + '/api'; // Uses environment variable for backend URL
 
 export const signup = async (email: string, password: string): Promise<User> => {
     const res = await fetch(`${API_URL}/signup`, {

@@ -9,7 +9,15 @@ const PORTFOLIOS_KEY = 'value-metrix-portfolios';
 const LOGS_KEY = 'value-metrix-logs';
 const SESSION_KEY = 'value-metrix-session';
 
-const API_URL = 'http://localhost:5000/api/portfolios';
+const API_URL = import.meta.env.VITE_API_URL + '/api/portfolios';
+
+declare global {
+  interface ImportMeta {
+    env: {
+      VITE_API_URL: string;
+    };
+  }
+}
 
 function getAuthHeaders() {
     const token = localStorage.getItem('jwt_token');
